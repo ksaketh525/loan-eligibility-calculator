@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loan Advisor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="app">
+    <h1>💳 Loan Eligibility Calculator  Dashboard</h1>
+
+    <!-- Loan Type Cards -->
+    <div class="loan-types">
+      <div class="loan-card active" data-type="home">🏠 Home Loan</div>
+      <div class="loan-card" data-type="car">🚗 Car Loan</div>
+      <div class="loan-card" data-type="personal">💼 Personal Loan</div>
+    </div>
+
+    <!-- Inputs -->
+    <div class="form">
+      <input type="number" id="income" placeholder="Monthly Income (₹)" />
+      <input type="number" id="existingEMI" placeholder="Existing EMI (₹)" />
+      <input type="number" id="rate" placeholder="Interest Rate (%)" />
+      <input type="number" id="years" placeholder="Tenure (Years)" />
+      <button onclick="calculate()">Check Eligibility</button>
+    </div>
+
+    <!-- Result -->
+    <div class="result">
+      <div class="circle">
+        <span id="loanAmount">₹0</span>
+        <small>Eligible Amount</small>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-box">
+      <canvas id="emiChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
